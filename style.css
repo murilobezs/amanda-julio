@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4d4d;
+    font-size: 3em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    background: #ff4d4d;
+    margin: 20px auto;
+    transform: rotate(45deg);
+    animation: heartbeat 1.5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #ff4d4d;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before { left: -25px; }
+.heart:after { top: -25px; }
+
+.message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message p {
+    margin: 15px 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.message p:first-child {
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #ff4d4d;
+}
+
+.playlist {
+    text-align: center;
+}
+
+.playlist p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.gallery {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 40px auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    max-width: 100%;
+}
+
+.gallery-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.gallery-img:nth-child(3) {
+    transform: rotate(-90deg);
+}
+
+.gallery-img:nth-child(3):hover {
+    transform: rotate(-90deg) translateY(-5px);
+}
+
+.spotify-code {
+    width: 60%;
+    max-width: 250px;
+    margin: 20px auto;
+    display: block;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.spotify-code:hover {
+    transform: scale(1.05);
+}
+
+@keyframes heartbeat {
+    0% { transform: rotate(45deg) scale(1); }
+    14% { transform: rotate(45deg) scale(1.1); }
+    28% { transform: rotate(45deg) scale(1); }
+    42% { transform: rotate(45deg) scale(1.1); }
+    70% { transform: rotate(45deg) scale(1); }
+}
+
